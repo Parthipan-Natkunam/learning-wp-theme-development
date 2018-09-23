@@ -9,6 +9,11 @@
                     <div class="meta">
                         Created By: <?php the_author(); ?> on <?php the_time('F j, Y g:i a');?>
                     </div>
+                    <?php if(has_post_thumbnail()): ?>
+                        <div class="featured-img">
+                            <?php the_post_thumbnail(); ?>
+                        </div>
+                    <?php endif;?>
                     <?php the_content(); ?>
                 </div>
             <?php endwhile; ?>

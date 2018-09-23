@@ -61,3 +61,8 @@ main.posts-list .readmore-btn{
     color: #fff;
     padding: 8px 16px;
 }
+
+.featured-img, .featured-img img{
+    width: 100%;
+    height:auto;
+}
