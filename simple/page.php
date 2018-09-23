@@ -1,0 +1,23 @@
+<?php get_header(); ?> 
+   <main class="single-post">
+        <?php if(have_posts()): ?>
+            <?php while(have_posts()) : the_post() ?>
+                <div class="container">
+                    <h3>
+                        <?php the_title();?>
+                    </h3>
+                    <?php if(has_post_thumbnail()): ?>
+                        <div class="featured-img">
+                            <?php the_post_thumbnail(); ?>
+                        </div>
+                    <?php endif;?>
+                    <?php the_content(); ?>
+                </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <div class="container">
+                <?php echo wpautop('Sorry, no posts found.'); ?>
+            </div>
+        <?php endif; ?>
+   </main>
+<?php get_footer(); ?>
